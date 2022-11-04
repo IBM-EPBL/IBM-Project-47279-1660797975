@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Table of Content</title>
+    <meta name="robots" content="noindex">
+    <style>
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        div {
+            padding: 50px;
+            display: flex;
+            /*justify-content: center;*/
+            /*align-items: center;*/
+            flex-flow: column;
+            background-color: #000;
+            width: 100%;
+            min-height: 100vh;
+            font-family: "Lato", sans-serif;
+            color: #fff;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        body h1 {
+            background-image: linear-gradient(to right, orange, orangered);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        ol {
+            counter-reset: index;
+            list-style-type: none;
+        }
+
+        li:before {
+            counter-increment: index;
+            content: counters(index, ".") " ";
+            font-size: 1.2rem;
+            font-weight: bold;
+            background-image: linear-gradient(to right, orange, rgb(72, 255, 0));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Car Resell Validation Project</h1>
+        <ol>
+            <li><a href="pages/login.html">Login</a></li>
+            <li><a href="pages/sign-up.html">Sign Up</a></li>
+        </ol>
+    </div>
+
+</body>
+
+</html>

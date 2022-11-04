@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link href="../assets/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/scss/index.css">
+    <script src="/assets/js/main.js"></script>
+</head>
+
+<body>
+    <section class="om-py-5 om-min-h-screen om-flex om-items-center om-justify-center">
+        <div x-data="getData()" class="om-w-full">
+            <div class="om-container">
+                <form class="om-max-w-screen-xsm om-mx-auto" id="form" @submit.prevent="submitData" action="">
+
+                    <div id="om-parent-mail" class="om-login-field  om-mb-4">
+                        <img class="om-w-32 om-h-[72px] om-object-contain om-mx-auto"
+                            src="../assets/images/logo//logo.ky" alt="logo">
+
+                        <div>
+                            <label class="om-text-base om-block om-text-dim-black om-my-2.5 om-font-medium"
+                                for="first-name">
+                                Name
+                            </label>
+                            <div
+                                class="om-input-field om-border om-rounded om-field-normal om-px-4 om-h-12 om-flex om-items-center">
+                                <img class="om-w-5 om-h-4 om-object-contain" src="../assets/images/icons/user.png"
+                                    alt="mail" x-model="formData.email">
+                                <input class="om-w-full om-border-0 placeholder:om-text-sm" id="first-name" type="email"
+                                    placeholder="First Name" data-rules='["required"]'>
+                            </div>
+                            
+
+                        </div>
+                        <div>
+                            <label class="om-text-base om-block om-text-dim-black om-my-2.5 om-font-medium"
+                                for="last-name">
+                               Last Name
+                            </label>
+                            <div
+                                class="om-input-field om-border om-rounded om-field-normal om-px-4 om-h-12 om-flex om-items-center">
+                                <img class="om-w-5 om-h-4 om-object-contain" src="../assets/images/icons/user.png"
+                                    alt="mail" x-model="formData.email">
+                                <input class="om-w-full om-border-0 placeholder:om-text-sm" id="last-name" type="text"
+                                    placeholder="Last Name" data-rules='["required"]'>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="om-text-base om-block om-text-dim-black om-my-2.5 om-font-medium"
+                                for="last-name">
+                               Mobile number
+                            </label>
+                            <div
+                                class="om-input-field om-border om-rounded om-field-normal om-px-4 om-h-12 om-flex om-items-center">
+                                <img class="om-w-5 om-h-4 om-object-contain" src="../assets/images/icons/telephone.png"
+                                    alt="mail" x-model="formData.email">
+                                <input class="om-w-full om-border-0 placeholder:om-text-sm" id="last-name" type="number"
+                                    placeholder="Mobile number" data-rules='["required"]'>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="om-text-base om-block om-text-dim-black om-my-2.5 om-font-medium"
+                                for="login-mail">
+                                Email ID
+                            </label>
+                            <div
+                                class="om-input-field om-border om-rounded om-field-normal om-px-4 om-h-12 om-flex om-items-center">
+                                <img class="om-w-5 om-h-4 om-object-contain" src="../assets/images/icons/mail.svg"
+                                    alt="mail" x-model="formData.email">
+                                <input class="om-w-full om-border-0 placeholder:om-text-sm" id="login-mail" type="email"
+                                    placeholder="Email" data-rules='["required","email"]'>
+                            </div>
+                            <p class="error-msg om-text-xs om-mt-1 om-text-UE-Red om-hidden"><img
+                                    class="om-object-contain om-mr-3" src="../assets/images/icons/Error-Icon.svg"
+                                    alt="error icon"> Enter a Valid Email</p>
+
+                        </div>
+                    </div>
+                    <div id="om-paren-pass-field" class="om-login-field om-mb-4 ">
+                        <div>
+                            <label class="om-text-base om-block om-text-dim-black om-my-2.5 om-font-medium"
+                                for="login-pass">
+                                Password
+                            </label>
+                            <div
+                                class=" om-input-field om-border om-rounded om-field-normal om-px-4 om-h-12 om-flex om-items-center">
+                                <img class="om-w-5 om-h-4 om-object-contain" src="../assets/images/icons/lock.svg"
+                                    alt="locks">
+                                <input class="om-w-full om-border-0 placeholder:om-text-sm" id="login-pass"
+                                    type="password" placeholder="Password shoud be min 8 charcters">
+                                <img class="om-hidden-eye om-hidden om-w-[15px]  om-h-3.5 om-object-contain om-cursor-pointer"
+                                    src="../assets/images/icons/hidden-eye.svg" alt="hidden-eye"
+                                    onclick="pass_visiblity()">
+                            </div>
+                            <p class="error-msg om-text-xs om-mt-1 om-text-UE-Red om-hidden"><img
+                                    class="om-object-contain om-mr-3" src="../assets/images/icons/Error-Icon.svg"
+                                    alt="error icon"> Enter a Correct Password</p>
+                        </div>
+                        <div>
+                            <label class="om-text-base om-block om-text-dim-black om-my-2.5 om-font-medium"
+                                for="confirm-pass">
+                               Confirm Password
+                            </label>
+                            <div
+                                class=" om-input-field om-border om-rounded om-field-normal om-px-4 om-h-12 om-flex om-items-center">
+                                <img class="om-w-5 om-h-4 om-object-contain" src="../assets/images/icons/lock.svg"
+                                    alt="locks">
+                                <input class="om-w-full om-border-0 placeholder:om-text-sm" id="confirm-pass"
+                                    type="password" placeholder="Confirm Password">
+                                <img class="om-hidden-eye om-hidden om-w-[15px]  om-h-3.5 om-object-contain om-cursor-pointer"
+                                    src="../assets/images/icons/hidden-eye.svg" alt="hidden-eye"
+                                    onclick="pass_visiblity()">
+                            </div>
+                            <p class="error-msg om-text-xs om-mt-1 om-text-UE-Red om-hidden"><img
+                                    class="om-object-contain om-mr-3" src="../assets/images/icons/Error-Icon.svg"
+                                    alt="error icon"> Enter a Correct Password</p>
+                        </div>
+                    </div>
+                    <button
+                        class="om-text-xl om-my-5 om-font-bold om-bg-sky-blue om-text-center om-rounded om-w-full om-py-3 om-text-white"
+                        onclick="submit_validater()" x-text='buttonLabel' :disabled='loading' type="button">Login
+                    </button>
+                    <a class="om-text-sky-blue om-text-base om-mb-2 om-text-right om-block" href="login.html">Already have account</a>
+                </form>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>
