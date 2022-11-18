@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Resale Value Prediction</title>
+        <link rel="stylesheet" href="/static/css/styles.css">
+        <style>
+            *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Open Sans";
+    color: rgb(213, 230, 230);
+}
+section{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: url("https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?cs=srgb&dl=pexels-vlad-alexandru-popa-1402787.jpg&fm=jpg&_gl=1*lpkuvp*_ga*NDg2NjEyMzguMTY2ODI1MjczMg..*_ga_8JE65Q40S6*MTY2ODI1OTA1OS4yLjEuMTY2ODI1OTA2Mi4wLjAuMA..");
+    background-size: cover;
+    background-position:center center;
+}
+.form-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  
+    background: linear-gradient(rgba(161, 58, 14, 0.3),rgba(150, 26, 30, 0.3));
+    width: 480px;
+    text-align: justify;
+    padding: 50px 30px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 60px #000;
+}
+h1{
+    text-transform:uppercase;
+    font-size: 2em;
+    text-align:center;
+    margin-bottom:2em;
+
+}
+.control input{
+    width:100%;
+    display:block;
+    padding: 10px;
+    color:#222;
+    border:none;
+    outline:none;
+    margin: 1em 0;
+}
+.form-container input[type="submit"]{
+    background:crimson;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+    opacity: .7;
+    transition:opacity .3s ease;
+}
+.control input[type="submit"]:hover{
+    opacity:1;
+}
+.link{
+    text-align:center;
+}
+.link a{
+    text-decoration: none;
+    color:#fff;
+    opacity: .7;
+    transition: opacity .3s ease;
+}
+.link a:hover{
+    opacity: 1;
+}
+
+        </style>
+    
+    </head>
+    <body>
+        <section>
+            <div class="form-container">
+                <h1>Get the accurate resale value of your car!!</h1>
+                <form action="/predict">
+                    
+                  
+            
+                
+                    <p>With difficult economic conditions, it is likely that sales of
+                         reconditional second-hand car will increase. In most of the 
+                         countries, it is common to lease a car rather than buying it 
+                         outright. A lease is a binding contract between a buyer and a
+                         seller in which the buyer must pay fixed instalments for a
+                         pre-defined number of months/year to the seller/financer. after
+                         car at its residual value, i.e. its expected resale value. Thus,
+                         this application is of commercial interest to seller/financers to be
+                         able to predict the residual value of cars with accuracy.</p><br><br>
+
+
+                        
+                        <div class="que">
+                            <a href="/predict">
+                            <input type="submit" value="WANT TO KNOW THE RESALE VALUE OF YOUR CAR??">
+                            </a>
+                        </div>    
+                        
+                        
+                    </div>
+                </form>
+               
+            </div>
+        </section>
+    </body>
+        
+        
+        
+
+    
+</html>
